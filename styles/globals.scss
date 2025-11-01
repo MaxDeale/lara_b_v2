@@ -30,3 +30,24 @@ body {
     width: 200px;
   }
 }
+
+/* Default site zoom: 70% */
+/* Use native zoom where supported, otherwise fall back to transform scaling for Firefox */
+@supports (zoom: 1) {
+  html {
+    zoom: 0.7;
+  }
+}
+
+@supports not (zoom: 1) {
+
+  /* transform fallback: keep origin at top-left and expand the layout width so content doesn't get clipped */
+  body {
+    transform-origin: 0 0;
+    transform: scale(0.7);
+    width: 142.85714%;
+    /* 1 / 0.7 = 1.4285714 */
+  }
+}
+
+/* If you notice fixed-position elements (header/footer) behaving oddly after scaling, consider wrapping the app in a container and scaling that container instead. */
