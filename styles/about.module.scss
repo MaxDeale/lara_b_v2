@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@500&display=swap");
+
+.menuContainer {
+  width: 70%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  display: flex;
+
+  div {
+    width: 200px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .menuItem1 {
+    transition: all 1s;
+
+    &:hover {
+      transform: translateY(20px);
+    }
+  }
+
+  .menuItem2 {
+    transition: all 2s;
+
+    &:hover {
+      transform: translateY(20px);
+    }
+  }
+
+  .menuItem3 {
+    transition: all 1s;
+
+    &:hover {
+      transform: translateY(20px);
+    }
+  }
+
+  .menuItem4 {
+    transition: all 1s;
+
+    &:hover {
+      transform: rotateY(360deg);
+    }
+  }
+}
+
+.catNav {
+  margin-left: 6%;
+}
+
+.aboutContainer {
+  display: flex;
+  width: 80%;
+  margin: 2rem auto;
+
+  img {
+    width: 700px;
+  }
+
+  .aboutInfo {
+    font-size: 1.5rem;
+    padding: 2rem;
+    line-height: 2;
+    margin-left: 8%;
+  }
+}
+

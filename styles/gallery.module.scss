@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spectral+SC:wght@200&display=swap");
+
+.menuContainer {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  div {
+    width: 200px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .menuItem1 {
+    transition: all 1s;
+
+    &:hover {
+      transform: translateY(20px);
+    }
+  }
+
+  .menuItem2 {
+    transition: all 2s;
+
+    &:hover {
+      transform: translateY(20px);
+    }
+  }
+
+  .menuItem3 {
+    transition: all 1s;
+
+    &:hover {
+      transform: translateY(20px);
+    }
+  }
+
+  .menuItem4 {
+    transition: all 1s;
+
+    &:hover {
+      transform: rotateY(360deg);
+    }
+  }
+}
+
+.gallery {
+  .galIntro {
+    width: 20%;
+    display: flex;
+    margin: 1rem auto;
+
+    h2 {
+      width: 600px;
+      font-size: 4.2rem;
+      font-weight: lighter;
+      text-align: center;
+      margin: 1rem auto;
+    }
+  }
+
+  .galleryContainer {
+    width: 85%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+
+    .galleryItem {
+      position: relative;
+      border: 1px solid transparent;
+      width: 100%;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: rgba(255, 255, 255, 0.05);
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+
+        .portPic {
+          transform: scale(1.05);
+        }
+
+        .imageOverlay {
+          opacity: 1;
+        }
+      }
+
+      .portPic {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .imageOverlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+        padding: 1rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+        .imageTitle {
+          color: white;
+          font-size: 1rem;
+          font-weight: 500;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+// Lightbox styles
+.lightboxOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  .lightboxContent {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+
+    img {
+      max-width: 100%;
+      max-height: 90vh;
+      object-fit: contain;
+    }
+
+    .closeButton {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: white;
+      font-size: 2rem;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.4);
+      }
+    }
+
+    .navButton {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: white;
+      font-size: 2rem;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      &.prev {
+        left: -60px;
+      }
+
+      &.next {
+        right: -60px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    .galleryContainer {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+  }
+
+  .lightboxOverlay {
+    .lightboxContent {
+      .navButton {
+        &.prev {
+          left: 10px;
+        }
+
+        &.next {
+          right: 10px;
+        }
+      }
+    }
+  }
+}
+

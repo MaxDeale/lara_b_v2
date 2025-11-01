@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spectral+SC:wght@200&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Spectral";
+  background-image: url("/assets/img/bkgrnd1.png");
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+#main-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  img {
+    width: 200px;
+  }
+}
+
