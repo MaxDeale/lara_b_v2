@@ -46,7 +46,8 @@ export default function About() {
       <div className={styles.aboutContainer}>
         <div>
           <Image
-            src="/assets/img/PORTRAIT2.jpg"
+            className={styles.portrait}
+            src="/assets/img/PORTRAIT2.png"
             alt="Lara Berge"
             width={700}
             height={700}
@@ -57,11 +58,11 @@ export default function About() {
           Africa.
           <br />
           <br />
-          ​She describes herself as a creative, crazy cat lady, a lover of all
+          She describes herself as a creative, crazy cat lady, a lover of all
           things whimsical and fantastical and loves a good cup of tea or coffee.
           <br />
           <br />
-          ​ She plans to write and illustrate children&apos;s books in the near future
+          She plans to write and illustrate children&apos;s books in the near future
           but for now she will keep putting her little characters and twisted
           trees out into the universe.
         </div>
