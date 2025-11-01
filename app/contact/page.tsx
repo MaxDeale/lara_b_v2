@@ -77,7 +77,7 @@ export default function Contact() {
             src="/assets/img/treecontact.png"
             alt="Decorative tree illustration"
             width={300}
-            height={700}
+            height={600}
           />
 
           <div>

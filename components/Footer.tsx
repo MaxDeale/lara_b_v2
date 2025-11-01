@@ -1,10 +1,12 @@
 import Image from 'next/image'
 
 export default function Footer() {
+  const year = new Date().getFullYear()
+
   return (
     <footer id="main-footer">
       <div>
-        <p>Copyright 2021 &copy; Lara Berge</p>
+        <p>Copyright {year} &copy; Lara Berge</p>
       </div>
       <div>
         <Image
