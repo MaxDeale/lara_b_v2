@@ -1,47 +1,34 @@
-@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@300;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Spectral+SC:wght@200&display=swap");
+
+
 
 .menuContainer {
   width: 60%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
 
   div {
     width: 200px;
+    transition: transform 400ms ease;
 
     img {
       width: 100%;
+      display: block;
     }
   }
 
-  .menuItem1 {
-    transition: all 1s;
-
-    &:hover {
-      transform: translateY(20px);
-    }
-  }
-
-  .menuItem2 {
-    transition: all 2s;
-
-    &:hover {
-      transform: translateY(20px);
-    }
-  }
-
+  .menuItem1,
+  .menuItem2,
   .menuItem3 {
-    transition: all 1s;
-
     &:hover {
-      transform: translateY(20px);
+      transform: translateY(8px);
     }
   }
 
   .menuItem4 {
-    transition: all 1s;
-
     &:hover {
       transform: rotateY(360deg);
     }
@@ -49,160 +36,152 @@
 }
 
 .heading {
-  font-size: 3.2rem;
-  font-family: "Spectral SC";
+  font-size: 2.6rem;
+  font-family: "Spectral SC", serif;
   text-align: center;
-  margin: 1rem auto;
-  border-bottom: 3px solid blanchedalmond;
-  width: 400px;
+  margin: 1.2rem auto;
+  border-bottom: 3px solid var(--accent);
+  width: min(520px, 90%);
+  padding-bottom: 0.4rem;
 }
+
 
 .contactContainer {
   width: 80%;
-  margin: 2rem auto;
+  margin: 2.5rem auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
-  img {
-    width: 300px;
-  }
+  grid-template-columns: 1fr 420px;
+  gap: 2rem;
+  align-items: start;
 
   .contactForm {
     display: flex;
     flex-direction: column;
-    margin: 4rem;
+    margin: 0;
+    background: var(--glass);
+    padding: 1.2rem 1.6rem;
+    border-radius: var(--radius);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 
     .formGroup {
-      padding: 0.5rem;
+      padding: 0.4rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
 
-      label {
-        margin: 0 1rem;
-      }
+    label {
+      font-size: 1rem;
+      color: var(--accent-dark);
+    }
 
-      input {
-        padding: 1rem 0;
-        width: 100%;
-        outline: none;
-      }
+    input,
+    textarea {
+      padding: 0.8rem 1rem;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: box-shadow 180ms ease, border-color 180ms ease;
+      background: white;
+    }
 
-      input:focus {
-        outline: none;
-        border-color: blanchedalmond;
-      }
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--accent-dark);
+      box-shadow: 0 4px 14px rgba(71, 54, 23, 0.08);
+    }
 
-      textarea {
-        width: 100%;
-        height: 300px;
-        font-size: 1.5rem;
-      }
-
-      textarea:focus {
-        outline: none;
-        border-color: blanchedalmond;
-      }
+    textarea {
+      min-height: 160px;
+      resize: vertical;
+      font-size: 1rem;
     }
   }
 
   .formSubmit {
-    padding: 1rem;
-    width: 100%;
-    background-color: blanchedalmond;
+    padding: 0.9rem 1rem;
+    width: 160px;
+    background-color: var(--accent);
     font-size: 1rem;
-    border: 1px solid rgb(71, 54, 23);
-    transition: all 0.4s ease-in-out;
+    border: 1px solid var(--accent-dark);
+    border-radius: 6px;
+    align-self: start;
+    transition: transform 160ms ease, background-color 160ms ease, color 160ms ease;
 
     &:hover {
-      background-color: rgb(71, 54, 23);
-      color: blanchedalmond;
-      border: 1px solid blanchedalmond;
+      transform: translateY(-3px);
+      background-color: var(--accent-dark);
+      color: var(--accent);
       cursor: pointer;
     }
   }
 
   .contactDetails {
-    display: grid;
+    display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
+    gap: 0.6rem;
 
     h4 {
-      font-size: 2rem;
+      font-size: 1.1rem;
+      margin: 0;
+      color: var(--accent-dark);
     }
 
     p {
-      margin: 1rem 0;
-      font-size: 1.2rem;
+      margin: 0.4rem 0;
+      font-size: 1rem;
+      color: #222;
+    }
 
-      i {
-        color: rgb(71, 54, 23);
-        transition: all 1s ease-in-out;
+    i {
+      color: var(--accent-dark);
+      transition: transform 220ms ease;
+    }
 
-        &:hover {
-          background-color: rgb(71, 54, 23);
-          color: blanchedalmond;
-          border-radius: 50%;
-          padding: 1rem;
-        }
-      }
+    a i:hover {
+      transform: scale(1.06);
     }
   }
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 880px) {
+  .contactContainer {
+    grid-template-columns: 1fr;
+    width: 94%;
+    gap: 1.2rem;
+  }
+
   .heading {
-    font-size: 2rem;
+    font-size: 1.9rem;
+  }
+
+  .formSubmit {
     width: 100%;
+    align-self: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .menuContainer {
+    width: 100%;
+    gap: 0.6rem;
+    justify-content: center;
+  }
+
+  .heading {
+    font-size: 1.6rem;
   }
 
   .contactContainer {
-    .tree {
-      width: 50%;
-    }
+    padding: 0 0.6rem;
   }
 
   .contactForm {
-    flex-direction: column;
-    width: 100%;
-    margin: 0 auto !important;
-
-    .formGroup {
-      display: flex;
-      flex-direction: column;
-      margin: 0 auto;
-
-      input {
-        padding: 0;
-        width: 90% !important;
-      }
-    }
-
-    .message {
-      width: 100%;
-    }
-
-    .formSubmit {
-      width: 50%;
-      margin: 0 auto;
-    }
-  }
-
-  .contactContainer {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .contactDetails {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-
-    h4 {
-      font-size: 15px !important;
-    }
-
-    p {
-      font-size: 18px !important;
-    }
+    padding: 1rem;
   }
 }
-

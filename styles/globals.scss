@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Spectral:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Spectral+SC:wght@200&display=swap");
 
+:root {
+  --accent: blanchedalmond;
+  --accent-dark: rgb(71, 54, 23);
+  --glass: rgba(255, 255, 255, 0.85);
+  --radius: 8px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -18,9 +25,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   img {
     width: 200px;
   }
 }
-
