@@ -45,9 +45,9 @@ export default function Navbar({ currentPage = 'home' }: NavbarProps) {
       )}
       {currentPage === 'about' && (
         <div className="menu-item-2">
-          <Link href="/about">
+          <a href="https://society6.com/laraberge" target="_blank" rel="noopener noreferrer">
             <Image src="/assets/img/shopframe.png" alt="Shop" width={200} height={200} />
-          </Link>
+          </a>
         </div>
       )}
       {currentPage === 'about' && (

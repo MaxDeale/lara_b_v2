@@ -54,12 +54,17 @@
     display: flex;
     margin: 1rem auto;
 
-    h2 {
+    .heading {
       width: 600px;
       font-size: 4.2rem;
       font-weight: lighter;
       text-align: center;
       margin: 1rem auto;
+      font-family: "Spectral SC", serif;
+    }
+
+    h2 {
+      @extend .heading;
     }
   }
 
@@ -225,4 +230,3 @@
     }
   }
 }
-

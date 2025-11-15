@@ -29,49 +29,17 @@ export default function Contact() {
             <Image src="/assets/img/aboutframe.png" alt="About" width={200} height={200} />
           </Link>
         </div>
+        <div className={styles.menuItem2}>
+          <a href="https://society6.com/laraberge" target="_blank" rel="noopener noreferrer">
+            <Image src="/assets/img/shopframe.png" alt="Shop" width={200} height={200} />
+          </a>
+        </div>
       </div>
 
       <h2 className={styles.heading}>Get In Touch</h2>
 
       <div className={styles.contactContainer}>
-        <section>
-          <form
-            action="https://formsubmit.co/laraberge@gmail.com"
-            className={styles.contactForm}
-            method="POST"
-            aria-label="Contact form"
-          >
-            <div className={styles.formGroup}>
-              <label htmlFor="name">Name</label>
-              <input id="name" type="text" name="name" placeholder="Your full name" required />
-            </div>
-
-            <div className={styles.formGroup}>
-              <label htmlFor="email">Email</label>
-              <input id="email" type="email" name="email" placeholder="you@domain.com" required />
-            </div>
-
-            <div className={styles.formGroup}>
-              <label htmlFor="phone">Phone (optional)</label>
-              <input id="phone" type="tel" name="phone" placeholder="+1 555 555 5555" />
-            </div>
-
-            <div className={styles.formGroup}>
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                className={styles.message}
-                placeholder="Tell me about your project or question"
-                required
-              ></textarea>
-            </div>
-
-            <button className={styles.formSubmit} type="submit">Send message</button>
-          </form>
-        </section>
-
-        <aside className={styles.contactDetails} aria-labelledby="contact-info">
+        <div className={styles.contactDetails} aria-labelledby="contact-info">
           <Image
             className={styles.tree}
             src="/assets/img/treecontact.png"
@@ -95,7 +63,7 @@ export default function Contact() {
               </a>
             </p>
           </div>
-        </aside>
+        </div>
       </div>
 
       <Footer />

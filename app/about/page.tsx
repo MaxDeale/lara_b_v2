@@ -28,17 +28,16 @@ export default function About() {
           </Link>
         </div>
         <div className={styles.menuItem2}>
-          <Link href="/about">
+          <a href="https://society6.com/laraberge" target="_blank" rel="noopener noreferrer">
             <Image src="/assets/img/shopframe.png" alt="Shop" width={200} height={200} />
-          </Link>
+          </a>
         </div>
         <div className={styles.catNav}>
           <Image
             src="/assets/img/catbooks.png"
             alt=""
             width={200}
-            height={200}
-            style={{ width: '70%' }}
+            height={360}
           />
         </div>
       </div>
@@ -65,6 +64,10 @@ export default function About() {
           She plans to write and illustrate children&apos;s books in the near future
           but for now she will keep putting her little characters and twisted
           trees out into the universe.
+          <br />
+          <br />
+          Feel free to get in touch via the contact page for commissions,
+          collaborations or just to say hi!
         </div>
       </div>
 

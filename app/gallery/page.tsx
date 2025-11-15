@@ -111,7 +111,7 @@ export default function Gallery() {
       <section id={styles.gallery} className={styles.gallery}>
         <div className={styles.galIntro}>
           <Image src="/assets/img/galcat.png" alt="" width={100} height={100} />
-          <h2>Gallery</h2>
+          <h2 className={styles.heading}>Gallery</h2>
         </div>
 
         <div className={styles.galleryContainer}>
@@ -126,7 +126,7 @@ export default function Gallery() {
                 src={`/assets/img/port2/${image}`}
                 alt={getImageTitle(image)}
                 width={250}
-                height={350}
+                height={380}
                 loading="lazy"
               />
               {/* title overlay removed per request (titles should no longer show) */}
