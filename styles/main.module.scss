@@ -97,3 +97,61 @@
     }
   }
 }
+
+/* Responsive: make the home page layout stack nicely on smaller screens
+   Keep the logo visible above the nav tiles, stack tiles vertically, and
+   hide the decorative grey cat/tree on small screens to avoid overflow. */
+@media (max-width: 880px) {
+  .mainContainer {
+    height: auto;
+    /* remove fixed height so content can flow */
+    width: 94%;
+    margin: 1.5rem auto;
+
+    .logo {
+      width: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .menuContainer {
+      position: static;
+      top: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      align-items: start;
+      justify-items: center;
+    }
+
+    .menuContainer .menuItem1,
+    .menuContainer .menuItem2,
+    .menuContainer .menuItem3,
+    .menuContainer .menuItem4,
+    .menuContainer .menuItem5 {
+      position: static;
+      left: auto;
+      top: auto;
+      transform: none;
+    }
+
+    .greyCat {
+      display: none;
+      /* hide decorative element on tablet/smaller */
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContainer {
+    .logo {
+      width: 70%;
+      margin-bottom: 0.8rem;
+    }
+
+    .menuContainer {
+      grid-template-columns: 1fr;
+      /* stack nav tiles vertically */
+      gap: 0.6rem;
+    }
+  }
+}
