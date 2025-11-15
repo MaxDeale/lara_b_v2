@@ -6,34 +6,11 @@ import Link from 'next/link'
 import Footer from '@/components/Footer'
 import styles from '@/styles/gallery.module.scss'
 
-// List of images in the portpics folder - easy to add new images here
-// Just add the filename to this array and the image will appear automatically
-const GALLERY_IMAGES = [
-  'beargrlpicnic-min.jpg',
-  'blkwmanchairpsd-min.jpg',
-  'catstar.jpg',
-  'catwoman.jpg',
-  'cauldron.jpg',
-  'dragon1.jpg',
-  'forestyshloo.jpg',
-  'girlchair.jpg',
-  'girldog.jpg',
-  'girlstar.jpg',
-  'gnomii.jpg',
-  'librarylady.jpg',
-  'nakdblacknwhitelady.jpg',
-  'octo.jpg',
-  'pixie.jpg',
-  'realmook.jpg',
-  'reindeer-min.jpg',
-  'spellmaidn-min.jpg',
-  'spellmaidn.jpg',
-  'spookgirl.jpg',
-  'springwoman.jpg',
-  'windgal-1-min.jpg',
-  'wmnghost.jpg',
-  'womanchair.jpg',
-]
+// Use images from the `port2` folder. They have been renamed to numeric filenames
+// (1.jpg, 2.jpg, 3.jpg, ...). The gallery will generate the image list from the
+// image count so you don't need to manually maintain filenames here.
+const IMAGE_COUNT = 40
+const GALLERY_IMAGES = Array.from({ length: IMAGE_COUNT }, (_, i) => `${i + 1}.jpg`)
 
 // Titles for images - can be customized per image
 const IMAGE_TITLES: Record<string, string> = {
@@ -146,15 +123,13 @@ export default function Gallery() {
             >
               <Image
                 className={styles.portPic}
-                src={`/assets/img/portpics/${image}`}
+                src={`/assets/img/port2/${image}`}
                 alt={getImageTitle(image)}
                 width={250}
                 height={350}
                 loading="lazy"
               />
-              <div className={styles.imageOverlay}>
-                <p className={styles.imageTitle}>{getImageTitle(image)}</p>
-              </div>
+              {/* title overlay removed per request (titles should no longer show) */}
             </div>
           ))}
         </div>
@@ -179,7 +154,7 @@ export default function Gallery() {
               ‹
             </button>
             <Image
-              src={`/assets/img/portpics/${GALLERY_IMAGES[selectedImage]}`}
+              src={`/assets/img/port2/${GALLERY_IMAGES[selectedImage]}`}
               alt={getImageTitle(GALLERY_IMAGES[selectedImage])}
               width={1200}
               height={1600}
