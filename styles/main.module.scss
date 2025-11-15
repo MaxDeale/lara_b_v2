@@ -32,6 +32,8 @@
 
   .menuContainer {
     position: relative;
+    /* nudge the home page nav tiles up slightly */
+    top: -38px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
@@ -48,7 +50,8 @@
     .menuItem2 {
       transition: all 2s;
       position: absolute;
-      left: 70%;
+      /* move About tile 5px left */
+      left: calc(70% - 15px);
 
       &:hover {
         transform: rotateY(360deg);
@@ -69,7 +72,8 @@
 
     .menuItem4 {
       width: 15%;
-      top: 300px;
+      /* move Shop tile 5px up */
+      top: 275px;
       left: 15%;
       transition: all 1s;
       position: absolute;
