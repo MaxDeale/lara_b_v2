@@ -106,6 +106,11 @@ export default function Gallery() {
             <Image src="/assets/img/aboutframe.png" alt="About" width={200} height={200} />
           </Link>
         </div>
+        <div className={styles.menuItem2}>
+          <a href="https://society6.com/laraberge" target="_blank" rel="noopener noreferrer">
+            <Image src="/assets/img/shopframe.png" alt="Shop" width={200} height={200} />
+          </a>
+        </div>
       </div>
 
       <section id={styles.gallery} className={styles.gallery}>

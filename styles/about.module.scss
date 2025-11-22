@@ -105,3 +105,46 @@
     margin-left: 8%;
   }
 }
+
+@media (max-width: 880px) {
+  .heading {
+    font-size: 1.9rem;
+  }
+
+  .aboutContainer {
+    width: 94%;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menuContainer {
+    width: 100%;
+    gap: 0.6rem;
+    justify-content: center;
+  }
+
+  .catNav {
+    margin: 0.6rem auto;
+  }
+
+  .aboutContainer {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0.6rem;
+  }
+
+  .aboutContainer img,
+  .aboutContainer .portrait {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+  }
+
+  .aboutInfo {
+    font-size: 1.05rem;
+    padding: 1rem 0;
+    margin-left: 0;
+    line-height: 1.6;
+  }
+}
